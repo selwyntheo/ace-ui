@@ -1,0 +1,51 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient definitions with blue palette -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0096c7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ade8f4;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ade8f4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0096c7;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Enhanced glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="15" fill="#0f0f23" stroke="url(#primaryGradient)" stroke-width="2"/>
+  
+  <!-- Abstract Tech logo mark -->
+  <g transform="translate(8, 8)">
+    <!-- Central diamond/rhombus -->
+    <polygon points="0,8 8,0 16,8 8,16" fill="url(#primaryGradient)" filter="url(#glow)"/>
+    
+    <!-- Overlapping circle -->
+    <circle cx="8" cy="10" r="4" fill="url(#accentGradient)" opacity="0.8"/>
+    
+    <!-- Inner core elements -->
+    <polygon points="4,8 8,4 12,8 8,12" fill="#ade8f4" opacity="0.9"/>
+    <circle cx="8" cy="10" r="2" fill="#0096c7" opacity="0.8"/>
+    
+    <!-- Tech connector lines -->
+    <line x1="8" y1="0" x2="8" y2="6" stroke="#ade8f4" stroke-width="1" opacity="0.8"/>
+    <line x1="16" y1="8" x2="10" y2="8" stroke="#ade8f4" stroke-width="1" opacity="0.8"/>
+    <line x1="8" y1="16" x2="8" y2="12" stroke="#ade8f4" stroke-width="1" opacity="0.8"/>
+    <line x1="0" y1="8" x2="6" y2="8" stroke="#ade8f4" stroke-width="1" opacity="0.8"/>
+    
+    <!-- Node points -->
+    <circle cx="8" cy="0" r="1" fill="#ade8f4"/>
+    <circle cx="16" cy="8" r="1" fill="#ade8f4"/>
+    <circle cx="8" cy="16" r="1" fill="#ade8f4"/>
+    <circle cx="0" cy="8" r="1" fill="#ade8f4"/>
+  </g>
+</svg>
